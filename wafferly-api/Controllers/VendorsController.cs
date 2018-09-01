@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using SaveBudgetApi.Models;
+using WafferlyApi.Models;
 
-namespace SaveBudgetApi.Controllers
+namespace WafferlyApi.Controllers
 {
     [Route("api/[controller]")]
     public class VendorsController : Controller

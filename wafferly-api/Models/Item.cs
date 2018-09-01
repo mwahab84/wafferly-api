@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace SaveBudgetApi.Models
+namespace WafferlyApi.Models
 {
 
     public class Item

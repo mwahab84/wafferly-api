@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using SaveBudgetApi.Models;
-using Amazon.Runtime.CredentialManagement;
+using WafferlyApi.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace SaveBudgetApi.Controllers
+namespace WafferlyApi.Controllers
 {
     [Route("api/[controller]")]
     public class ItemsController : Controller
@@ -19,9 +18,9 @@ namespace SaveBudgetApi.Controllers
             _dbContext = context;
             if (_dbContext.Items.Count() == 0)
             {
-                Vendor[] vendor = { new Vendor { Id = "78bfbdda-f1df-4957-a19e-0083fb2f8616", Title = "Carrefour", Desc = "This is Carrefour Hypermarket", VendorLogoPath = "http://bit.ly/carrfqa" },
-                new Vendor { Id = "e9544857-fbd8-4dfc-8610-a2291f6662ec", Title = "Al Meera", Desc = "Al Meera Hypermarket in Qatar", VendorLogoPath = "http://bit.ly/qameera" }};
-
+                Vendor[] vendor = { new Vendor { Id = "78dfbdcb-f1df-4957-a19e-0083fb2f8616", Title = "Carrefour", Desc = "This is Carrefour Hypermarket", VendorLogoPath = "http://bit.ly/carrfqa" },
+                new Vendor { Id = "e9446897-fbd8-4dfc-8610-a2291f6662ec", Title = "Al Meera", Desc = "Al Meera Hypermarket in Qatar", VendorLogoPath = "http://bit.ly/qameera" }};
+             
                 _dbContext.Items.AddRange(new List<Item> {new Item{Id="9c21249e-1fcc-4b82-8fd4-48290e36b170", Title="Potato", Desc="A description of the staple and how to use or save",Unit="Kg",
                     UnitPrice=13.75, Amount=1, OfferStartDate=DateTime.Today, Discount="http://bit.ly/sofferv",
                     OfferEndDate=DateTime.Today, ItemImagePath="http://bit.ly/ezaypotato",Vendor= vendor[0]},
@@ -30,9 +29,8 @@ namespace SaveBudgetApi.Controllers
                     OfferEndDate=DateTime.Today, ItemImagePath="http://bit.ly/onionsqa", Vendor=vendor[0]},
                 new Item{Id="376c04bf-861a-4d6e-83c6-7213948809f8", Title="Milk", Desc="A description of the staple and how to use or save",Unit="Ltr",
                     UnitPrice=10.50, Amount=5, OfferStartDate=DateTime.Today, Discount="http://bit.ly/sofferv",
-                    OfferEndDate=DateTime.Today, ItemImagePath="http://bit.ly/milkbqa", Vendor=vendor[1]}}
-);
-                _dbContext.SaveChanges();
+                    OfferEndDate=DateTime.Today, ItemImagePath="http://bit.ly/milkbqa", Vendor=vendor[1]}});
+             _dbContext.SaveChanges();   
             }
         }
 

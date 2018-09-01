@@ -10,11 +10,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using SaveBudgetApi.Models;
+using WafferlyApi.Models;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc;
 
-namespace SaveBudgetApi
+namespace WafferlyApi
 {
     public class Startup
     {

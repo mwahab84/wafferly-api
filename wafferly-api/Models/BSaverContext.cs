@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
-namespace SaveBudgetApi.Models
+namespace WafferlyApi.Models
 {
     public class BSaverContext: DbContext
     {
