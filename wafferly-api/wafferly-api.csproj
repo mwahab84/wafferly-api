@@ -2,8 +2,27 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
+    <RootNamespace>WafferlyApi</RootNamespace>
+    <StartupObject>WafferlyApi.Program</StartupObject>
+    <Authors>Mohamed Abdelwahab</Authors>
+    <Company>Vision Labs</Company>
+    <PackageId>WafferlyApi</PackageId>
+    <Product>Wafferly Api</Product>
+    <RepositoryUrl>http://www.github.com/mwahab84/wafferly-api</RepositoryUrl>
+    <PackageProjectUrl>http://api.wafferly.net</PackageProjectUrl>
+    <Copyright>2018</Copyright>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>Build</type>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
   <ItemGroup>
     <Folder Include="wwwroot\" />
     <Folder Include="Models\" />
